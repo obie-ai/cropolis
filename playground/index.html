@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cropolis</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        font-family: 'Mada', sans-serif;
+        color: #333;
+      }
+      .container {  
+        padding: 100px 200px;
+        height: calc(100% - 200px);
+      }
+
+      #editor {
+        height: 100%;
+      }
+    </style>
+    <link rel="stylesheet" href="../src/global.styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <section id="editor"></section>
+    </div>
+    <script>
+      var cropper = Cropolis.create(document.getElementById('editor'));
+      cropper.load('https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    </script>
+  </body>
+</html>

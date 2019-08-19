@@ -1,0 +1,56 @@
+.cropper-container {
+	max-width: 100%;
+}
+
+.cropolis-app .cropper-view-box {
+	outline: none;
+	outline-color: transparent;
+}
+
+.cropolis-app .cropper-center {
+	display: none;
+}
+
+.cropolis-app .cropper-modal {
+	opacity: 0.2;
+}
+
+.cropolis-app .cropper-line {
+	border: none;
+	background: transparent;
+	opacity: 1;
+}
+
+.cropolis-app .cropper-line.line-s {
+	border-bottom: 2px dashed #585aff;
+	bottom: -1px;
+}
+
+.cropolis-app .cropper-line.line-n {
+	border-top: 2px dashed #585aff;
+	top: -1px;
+}
+
+.cropolis-app .cropper-line.line-w {
+	border-left: 2px dashed #585aff;
+	left: -1px;
+}
+
+.cropolis-app .cropper-line.line-e {
+	border-right: 2px dashed #585aff;
+	right: -1px;
+}
+
+.cropolis-app .cropper-point {
+	display: none;
+}
+
+.cropolis-app .spinner {
+	height: 18px;
+	margin: 0 auto;
+	display: block;
+}
+
+.cropolis-app .spinner path, .cropolis-app .spinner rect {
+	fill: #585aff;
+}
