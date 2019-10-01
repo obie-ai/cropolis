@@ -95,6 +95,7 @@ class Cropolis extends React.Component {
 		this.cropper.current.load(src)
 		setTimeout(() => {
 			this.setState({
+				zoomLevel: 50,
 				loading: false
 			})
 		}, 500)

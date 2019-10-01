@@ -68,7 +68,7 @@ class CropperJS extends React.Component {
 			viewMode: 1,
 			guides: false,
 			strict: false,
-			minContainerWidth: 600,
+			minContainerWidth: 560,
 			minContainerHeight: 400
 		})
 	}
@@ -98,7 +98,7 @@ class CropperJS extends React.Component {
 					</svg>
 				}
 				<div style={{ display: imageLoaded === true ? 'block' : 'none' }}>
-					<img id="cropper" ref={this.cropElement} src={src} styles={{ maxWidth: '500px' }} onLoad={this.imageLoaded} />
+					<img id="cropper" ref={this.cropElement} src={src} style={{ maxWidth: '500px' }} onLoad={this.imageLoaded} />
 				</div>
 			</div>
 		)
