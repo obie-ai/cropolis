@@ -54,3 +54,20 @@
 .cropolis-app .spinner path, .cropolis-app .spinner rect {
 	fill: #585aff;
 }
+
+.cropolis-app .cropolis-disabled .cropper-disabled .cropper-drag-box, .cropolis-app .cropolis-disabled .cropper-disabled .cropper-face, 
+.cropolis-app .cropolis-disabled .cropper-disabled .cropper-line, .cropolis-app .cropolis-disabled .cropper-disabled .cropper-point {
+	cursor: default;
+}
+
+.cropolis-app .cropolis-disabled .cropper-container .cropper-crop-box {
+	display: none;
+}
+
+.cropolis-disabled-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}

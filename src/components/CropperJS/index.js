@@ -12,6 +12,19 @@ class CropperJS extends React.Component {
 		this.state = { src: null, imageLoaded: false }
 	}
 
+	enable = () => {
+		this.cropper.enable()
+		this.setState({
+			disabled: false
+		})
+	}
+
+	disable = () => {
+		this.setState({
+			disabled: true
+		})
+	}
+
 	zoom = value => {
 		try {
 			this.cropper.zoomTo(value / 50)
@@ -74,10 +87,10 @@ class CropperJS extends React.Component {
 	}
 
 	render() {
-		const { src, imageLoaded } = this.state
+		const { src, imageLoaded, disabled } = this.state
 
 		return (
-			<div>
+			<div className={disabled ? "cropolis-disabled" : ""} style={{ position: 'relative' }}>
 				{ !imageLoaded &&
 					<svg className="spinner" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30">
 						<rect x="0" y="7.5433" width="4" height="14.9134" fill="#fff" opacity="0.2">
@@ -100,6 +113,7 @@ class CropperJS extends React.Component {
 				<div style={{ display: imageLoaded === true ? 'block' : 'none' }}>
 					<img id="cropper" ref={this.cropElement} src={src} style={{ maxWidth: '500px' }} onLoad={this.imageLoaded} />
 				</div>
+				{ disabled && <div className="cropolis-disabled-overlay"></div> }
 			</div>
 		)
 	}

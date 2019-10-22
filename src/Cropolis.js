@@ -71,19 +71,29 @@ class Cropolis extends React.Component {
 	}
 
 	toggleRotateMode = () => {
-		this.setState({
-			modes: {
-				rotate: !this.state.modes.rotate
-			}
-		})
+		const { modes } = this.state
+		if (!modes.rotate) {
+			this.setState({
+				modes: {
+					rotate: true,
+					crop: false
+				}
+			})
+			this.cropper.current.disable()
+		}
 	}
 
 	toggleCropMode = () => {
-		this.setState({
-			modes: {
-				crop: !this.state.modes.crop
-			}
-		})
+		const { modes } = this.state
+		if (!modes.crop) {
+			this.setState({
+				modes: {
+					crop: true,
+					rotate: false
+				}
+			})
+			this.cropper.current.enable()
+		}
 	}
 
 	getCroppedImage = () => {
