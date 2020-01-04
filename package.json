@@ -1,8 +1,8 @@
 {
-  "name": "cropolis",
+  "name": "@alexsopinka/cropolis",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "webpack-dev-server --hot --mode development --open",
     "build": "webpack --mode production"
